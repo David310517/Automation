@@ -446,7 +446,8 @@ class MainWindow(QMainWindow):
         main.addWidget(self.table)
 
         self.excel_in.textChanged.connect(self.populate_sites)
-        self.site_list.itemSelectionChanged.connect(self.preview_devices)
+        # Update preview whenever a site's checkbox is toggled
+        self.site_list.itemChanged.connect(self.preview_devices)
 
         if self.excel_in.text().strip():
             self.populate_sites()
@@ -456,12 +457,14 @@ class MainWindow(QMainWindow):
         for i in range(self.site_list.count()):
             item = self.site_list.item(i)
             item.setCheckState(Qt.Checked)
+        self.preview_devices()
 
     def deselect_all_sites(self):
         """Uncheck all sites in the site selection widget."""
         for i in range(self.site_list.count()):
             item = self.site_list.item(i)
             item.setCheckState(Qt.Unchecked)
+        self.preview_devices()
 
     def browse_excel(self):
         p,_ = QFileDialog.getOpenFileName(self,"Select Excel",filter="Excel Files (*.xlsx)")
@@ -490,7 +493,7 @@ class MainWindow(QMainWindow):
             print(f"Error populating sites: {e}")
         self.preview_devices()
 
-    def preview_devices(self):
+    def preview_devices(self, *_):
         self.preview_model.removeRows(0, self.preview_model.rowCount())
         if not self.excel_in.text().strip():
             return
