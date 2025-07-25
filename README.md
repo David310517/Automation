@@ -96,6 +96,85 @@ A network engineer preparing for an SD-WAN migration needs:
 - All tunnel and private circuit details
 - VRF and routing info per site
 - An Excel inventory to pass to deployment teams
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SD-WAN Migration GUI Tool
+A modern PySide6-based GUI application for network engineers to automate the extraction, mapping, and organization of WAN circuit data for SD-WAN migrations.
+Designed to work with output from the Circuit Info Collector tool as part of a seamless migration workflow. 
 
+Features
+User-Friendly GUI:
+
+Select source Circuit Info Excel workbook and Migration Planning workbook.
+
+Output file selector for new Excel results.
+
+Option to process all sheets, or a specific sheet only.
+
+Configurable starting row.
+
+Persistent user configuration (remembers your last settings).
+
+Automation & Parsing:
+
+Reads per-site and per-circuit data, extracting key details (provider, handoff, VLAN, bandwidth, interface descriptions, circuit IDs, IPs, peers).
+
+Identifies public/private provider types using keywords and regex.
+
+Auto-maps primary/secondary circuits into the migration planning sheet.
+
+Cleans and normalizes circuit description fields.
+
+Detects handoff type (fiber/copper), calculates subnet prefix, and peer IPs automatically.
+
+Progress Tracking:
+
+Live progress bar in the GUI.
+
+Error handling and completion pop-up.
+
+Professional Look:
+
+Clean, modern interface using qdarkstyle.
+
+Dependencies
+Python 3.x
+
+PySide6
+
+openpyxl
+
+qdarkstyle
+
+How to Use
+Launch the script:
+python migv15.py
+
+In the GUI:
+
+Select your Circuit Info Workbook (output from Circuit Info Collector).
+
+Select your Migration Planning Workbook (where to write results).
+
+Choose whether to process all circuit sheets or just one.
+
+Select the output file path.
+
+Set your starting row if needed.
+
+Click “Run Migration.”
+
+On completion, open your output file to see the fully organized migration data.
+
+Use Cases
+Pre-migration planning:
+Quickly map WAN circuits and details from multiple sites into a standardized migration planning workbook.
+
+Bulk project automation:
+Mass-processing of circuit info for SD-WAN cutovers, saving hours of manual work.
+
+Consistent documentation:
+Output is structured, normalized, and ready for handoff or further automation.
+
+This tool is the recommended next step after running the Circuit Info Collector. Together, they form a complete workflow for SD-WAN and WAN migration inventory management.
 This tool automates that — no manual CLI work required.
 
