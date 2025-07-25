@@ -39,14 +39,6 @@ It's designed to support SD-WAN migrations and WAN inventory audits by generatin
 ├── requirements.txt # Python dependencies
 └── README.md
 
-Copy
-Edit
-📋 2. Requirements
-Explain how to install dependencies.
-
-markdown
-Copy
-Edit
 ## 📋 Requirements
 
 - Python 3.8 or higher
@@ -58,18 +50,15 @@ pip install pandas
 pip install qdarkstyle
 
 
----
-
 ### 🚀 3. How to Use (step-by-step)
 
 Clear steps to run the tool:
 
-```markdown
 ## 🚀 How to Use
 
 1. Run the script:
-   ```bash
-   python circuitinfo19.py
+
+   python circuitinfo20.py
 Select the Excel file with router IPs (IP column required)
 
 Enter SSH credentials in the GUI prompt
@@ -78,17 +67,9 @@ Wait for the tool to extract data
 
 Output Excel will appear in /outputs/
 
-yaml
-Copy
-Edit
-
 ---
 
-### 📘 4. Example Use Case
 
-Shows what the tool is for in real life:
-
-```markdown
 ## 📘 Example Use Case
 
 A network engineer preparing for an SD-WAN migration needs:
@@ -149,16 +130,10 @@ qdarkstyle
 
 Install dependencies:
 
-bash
-Copy
-Edit
 pip install PySide6 openpyxl qdarkstyle
 🚀 How to Use
 Launch the script:
 
-bash
-Copy
-Edit
 python migv15.py
 In the GUI:
 
