@@ -97,47 +97,48 @@ A network engineer preparing for an SD-WAN migration needs:
 - VRF and routing info per site
 - An Excel inventory to pass to deployment teams
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-SD-WAN Migration GUI Tool
+🌐 SD-WAN Migration GUI Tool (Python + GUI)
+A modern PySide6-based GUI application—continuation of the Cisco Circuit Info Tool—for network engineers to automate the extraction, mapping, and organization of WAN circuit data for SD-WAN migrations.
+Designed to work with output from the Circuit Info Collector tool as part of a seamless migration workflow.
 
-A modern PySide6-based GUI application continuation of the Circuit information Tool for network engineers to automate the extraction, mapping, and organization of WAN circuit data for SD-WAN migrations.
-Designed to work with output from the Circuit Info Collector tool as part of a seamless migration workflow. 
+🔧 Features
+✅ User-Friendly GUI
 
-Features
-User-Friendly GUI:
+📂 Select source Circuit Info Excel workbook (from Circuit Info Collector)
 
-Select source Circuit Info Excel workbook and Migration Planning workbook.
+📋 Select Migration Planning workbook (destination for results)
 
-Output file selector for new Excel results.
+💾 Output file selector for new Excel export
 
-Option to process all sheets, or a specific sheet only.
+📑 Option to process all sheets, or a specific sheet only
 
-Configurable starting row.
+🔢 Configurable starting row for data insertion
 
-Persistent user configuration (remembers your last settings).
+📝 Persistent user configuration—remembers last settings
 
-Automation & Parsing:
+🤖 Automation & Parsing
 
-Reads per-site and per-circuit data, extracting key details (provider, handoff, VLAN, bandwidth, interface descriptions, circuit IDs, IPs, peers).
+🏷️ Extracts key details: provider, handoff (fiber/copper), VLAN, bandwidth, circuit IDs, interface descriptions, IPs, peers
 
-Identifies public/private provider types using keywords and regex.
+🌎 Identifies public/private provider types using keywords and regex
 
-Auto-maps primary/secondary circuits into the migration planning sheet.
+🔄 Auto-maps primary and secondary circuits into the migration planning sheet
 
-Cleans and normalizes circuit description fields.
+🧹 Cleans and normalizes circuit descriptions for records
 
-Detects handoff type (fiber/copper), calculates subnet prefix, and peer IPs automatically.
+📶 Calculates subnet prefix, peer IPs, and handoff type automatically
 
-Progress Tracking:
+📈 Progress Tracking
 
-Live progress bar in the GUI.
+⏳ Live progress bar in the GUI
 
-Error handling and completion pop-up.
+⚠️ Error handling and completion popup
 
-Professional Look:
+🌙 Professional Look
 
-Clean, modern interface using qdarkstyle.
+Clean, modern dark interface using qdarkstyle
 
-Dependencies
+📋 Requirements
 Python 3.x
 
 PySide6
@@ -146,27 +147,37 @@ openpyxl
 
 qdarkstyle
 
-How to Use
-Launch the script:
-python migv15.py
+Install dependencies:
 
+bash
+Copy
+Edit
+pip install PySide6 openpyxl qdarkstyle
+🚀 How to Use
+Launch the script:
+
+bash
+Copy
+Edit
+python migv15.py
 In the GUI:
 
-Select your Circuit Info Workbook (output from Circuit Info Collector).
+Select your Circuit Info Workbook (output from Circuit Info Collector)
 
-Select your Migration Planning Workbook (where to write results).
+Select your Migration Planning Workbook (where results go)
 
-Choose whether to process all circuit sheets or just one.
+(Optional) Choose whether to process all sheets or just one
 
-Select the output file path.
+Select output file path for the result
 
-Set your starting row if needed.
+Set your starting row if needed
 
-Click “Run Migration.”
+Click Run Migration
 
-On completion, open your output file to see the fully organized migration data.
+After completion:
+Open your output file to see the fully organized, migration-ready data.
 
-Use Cases
+💡 Use Cases
 Pre-migration planning:
 Quickly map WAN circuits and details from multiple sites into a standardized migration planning workbook.
 
@@ -176,6 +187,8 @@ Mass-processing of circuit info for SD-WAN cutovers, saving hours of manual work
 Consistent documentation:
 Output is structured, normalized, and ready for handoff or further automation.
 
-This tool is the recommended next step after running the Circuit Info Collector. Together, they form a complete workflow for SD-WAN and WAN migration inventory management.
-This tool automates that — no manual CLI work required.
+🔗 Workflow Integration
+This tool is the recommended next step after running the Circuit Info Collector.
+Together, they form a complete workflow for SD-WAN and WAN migration inventory management.
 
+No more manual CLI work required—let automation handle your migrations.
