@@ -98,7 +98,8 @@ A network engineer preparing for an SD-WAN migration needs:
 - An Excel inventory to pass to deployment teams
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SD-WAN Migration GUI Tool
-A modern PySide6-based GUI application for network engineers to automate the extraction, mapping, and organization of WAN circuit data for SD-WAN migrations.
+
+A modern PySide6-based GUI application continuation of the Circuit information Tool for network engineers to automate the extraction, mapping, and organization of WAN circuit data for SD-WAN migrations.
 Designed to work with output from the Circuit Info Collector tool as part of a seamless migration workflow. 
 
 Features
