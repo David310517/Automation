@@ -129,8 +129,12 @@ openpyxl
 qdarkstyle
 
 Install dependencies:
+pip install PySide6
+pip install netmiko
+pip install openpyxl
+pip install pandas
+pip install qdarkstyle
 
-pip install PySide6 openpyxl qdarkstyle
 🚀 How to Use
 Launch the script:
 
